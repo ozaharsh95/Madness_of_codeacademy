@@ -22,7 +22,7 @@ A brief description of what this project does and who it's for
     + In JSX `<h1 className="big">Title</h1>`
 
 + Self closing Tags:
-    + HTML ma `<img>` ✅ ,<img/> ✅
+    + HTML ma `<img>` ✅ ,`<img/>` ✅
     + JSX ma `<img/>` ✅
 
 + `{}` in JSX :
@@ -34,7 +34,7 @@ A brief description of what this project does and who it's for
 
 + `if` in JSX will not work:
     + Use Ternary Operator:`{ condn ? truth : false}` 
-```
+```javascript
 function coinToss () {
     // Randomly return either 'heads' or 'tails'.
     return Math.random() < 0.5 ? 'heads' : 'tails';
@@ -50,7 +50,7 @@ const img = <img src={pics[coinToss()==="heads" ? "kitty" : "doggy"]} />;
 ```
 + Code example 2:
 
-```
+```javascript
 // This is fine in JSX, not in an explicit array:
 <ul>
   <li>item 1</li>
@@ -77,11 +77,11 @@ const liArray = [
 + `React.createElement`
     + react code without jsx
         + JSX expression : 
-        ```
+        ```javascript
         const h1 = <h1>Hello world</h1>;
         ```
         + can be rewritten without JSX, like this:
-        ```
+        ```javascript
         const h1 =  React.createElement(
                         "h1",
                         null,
@@ -89,7 +89,7 @@ const liArray = [
                     );
 
         ```
-        + When a JSX element is compiled, the compiler transforms the JSX element into the method that you see above: React.createElement(). Every JSX element is secretly a call to React.createElement().
+        + When a JSX element is compiled, the compiler transforms the JSX element into the method that you see above: `React.createElement()`. Every JSX element is secretly a call to `React.createElement()`.
 
 ## React Component :
 
@@ -104,11 +104,11 @@ const liArray = [
 
 +  Components interact with each other by passing information or even returning other components.
 
-    ```
+    ```javascript
     import Button from './Button'
 
     function App() {
-    return <Button />;
+      return <Button />;
     }
 
     export default App;
